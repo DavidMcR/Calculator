@@ -22,9 +22,15 @@ public class MathApplicationTester {
 
     @Test
     public void testAdd(){
-        when(calcService.add(10.0, 20.0)).thenReturn(30.00);
+        when(calcService.addition(10.0, 20.0)).thenReturn(30.00);
 
-        Assert.assertEquals(mathApplication.add(10.0, 20.0),30.00,0);
+        Assert.assertEquals(mathApplication.addition(10.0, 20.0),30.00,0);
+    }
+    @Test
+    public void testMinus(){
+        when(calcService.subtract(10.0,20.0)).thenReturn(-10.0);
+
+        Assert.assertEquals(mathApplication.subtract(10.0,20.0), -10.0, 1.0);
     }
 
 }
