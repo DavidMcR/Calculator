@@ -32,5 +32,11 @@ public class MathApplicationTester {
 
         Assert.assertEquals(mathApplication.subtract(10.0,20.0), -10.0, 1.0);
     }
+    @Test
+    public void testDivide(){
+        when(calcService.divide(10.0,5)).thenReturn(2.0);
+
+        Assert.assertEquals(mathApplication.divide(10.0,5.0),2.0,0.1);
+    }
 
 }
