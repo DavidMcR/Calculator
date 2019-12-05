@@ -38,5 +38,10 @@ public class MathApplicationTester {
 
         Assert.assertEquals(mathApplication.divide(10.0,5.0),2.0,0.1);
     }
+    @Test
+    public void testMultiply(){
+        when(calcService.multiply(10.0,2.0)).thenReturn(20.0);
 
+        Assert.assertEquals(mathApplication.multiply(10.0,2.0), 20.0, 0.1);
+    }
 }
